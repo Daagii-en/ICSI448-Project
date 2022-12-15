@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: none;
+    background-color: #7ABDFB;
+    height: 14vh;
+    box-shadow: 0px 4px 4px #7ABDFB;
+    margin-bottom: 0.3em;
+}
+.header .brand{
+    display: flex;
+    justify-content: center;
+    margin-left: 25vw;
+}
+.header .brand h1 {
+    color: #020063;
+    font-family: Nunito;
+    font-weight: 850;
+    font-size: x-large;
+    
+}
+.header .logo img{
+    max-width: 60px;
+    max-height: 60px;
+  }
