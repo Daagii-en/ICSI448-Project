@@ -15,20 +15,20 @@ const PasswordModalForm = Form.create({ name: "form_in_modal" })(
 			return (
 				<Modal
 					visible={visible}
-					title={mode !== "decrypt" ? "Файл шифрлэх" : "Шифр тайлах"}
-					okText={mode !== "decrypt" ? "Шифрлэх" : "Шифр тайлах"}
+					title={mode !== "decrypt" ? "Encrypt file" : "Decrypt file"}
+					okText={mode !== "decrypt" ? "Encryption" : "Decryption"}
 					onCancel={onCancel}
 					onOk={onCreate}
 				>
 					<Form layout="vertical">
-						<Form.Item label="Нууц үг">
+						<Form.Item label="Password">
 							{getFieldDecorator("password", {
-								rules: [ { required: true, message: "Нууц үгээ бичнэ үү..." } ]
-							})(<Input.Password placeholder="Нууц үгээ бичнэ үү..." />)}
+								rules: [ { required: true, message: "password" } ]
+							})(<Input.Password placeholder="password" />)}
 
 							{mode !== "decrypt" ? <PasswordMeter password={passwordField} /> : ""}
 						</Form.Item>
-						{hint !== null || mode !== "decrypt" ? (
+						{/* {hint !== null || mode !== "decrypt" ? (
 							<Form.Item label="Тусламж">
 								{mode !== "decrypt" ? (
 									getFieldDecorator("hint", {
@@ -43,7 +43,7 @@ const PasswordModalForm = Form.create({ name: "form_in_modal" })(
 									hint
 								)}
 							</Form.Item>
-						) : null}
+						) : null} */}
 					</Form>
 				</Modal>
 			);
