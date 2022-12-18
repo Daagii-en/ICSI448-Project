@@ -8,6 +8,9 @@
     /* margin: 20px 0; */
     margin: auto;
     font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media(max-width: 768px) {

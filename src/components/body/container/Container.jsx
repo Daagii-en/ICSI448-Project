@@ -7,14 +7,9 @@ import StepModal from "../../modal/StepModal/StepModal";
 const Container = (props) => {
   return (
     <div className={ContainerCSS.container}>
-      <h1>
-        <center>Файл нууцлах веб апп</center>
-      </h1>
-      <h3></h3>
+      <FileSelect />
       <PasswordModal />
       <StepModal />
-
-      <FileSelect />
     </div>
   );
 };

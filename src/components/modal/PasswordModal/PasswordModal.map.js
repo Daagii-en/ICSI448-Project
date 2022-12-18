@@ -1,7 +1,6 @@
 export const mapState = (state) => {
     return {
         modal: state.passwordModal,
-        hint: state.files.hint,
         mode: state.files.mode
     };
 };
@@ -14,12 +13,11 @@ export const mapDispatch = (dispatch) => {
                 payload: {}
             });
         },
-        updateFileInfo(password, hint) {
+        updateFileInfo(password) {
             dispatch({
                 type: "ADD_FORM_DATA",
                 payload: {
-                    password,
-                    hint
+                    password
                 }
             });
         }
