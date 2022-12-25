@@ -2,7 +2,7 @@ import React from "react";
 import bodyCSS from "./body.module.css";
 import Container from "./container/Container";
 
-const Body = (props) => {
+const Body = () => {
   return (
     <div className={bodyCSS.body}>
       <div className={bodyCSS.description}>
@@ -26,12 +26,11 @@ const Body = (props) => {
             <h1>
               <center>Файл нууцлах веб апп</center>
             </h1>
-            <h3></h3>
             <p>
-              Та файлаа шифрлэлт ашиглан нууцалснаар бусдаас өөрийн мэдээллээ
-              хамгаалж чадна. Энэхүү веб нь таны файлыг нууж мөн нууцалсан
-              файлыг задлах боломжтой юм.
-            </p>{" "}
+              Та AES стандартаар файлаа шифрлэн нууцалснаар бусдаас өөрийн
+              мэдээллээ хамгаалж чадна. Энэхүү веб нь таны файлыг нууж мөн
+              нууцалсан файлыг задлах боломжтой юм.
+            </p>
           </div>
         </div>
         <div className={bodyCSS.button}>

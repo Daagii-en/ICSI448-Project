@@ -25,7 +25,6 @@ const PasswordModalForm = Form.create({ name: "form_in_modal" })(
               {getFieldDecorator("password", {
                 rules: [{ required: true, message: "password" }],
               })(<Input.Password placeholder="password" />)}
-
               {mode !== "decrypt" ? (
                 <PasswordMeter password={passwordField} />
               ) : (

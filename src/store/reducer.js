@@ -13,7 +13,6 @@ const initialState = {
         mode: null,
         fileList: [],
         data: null,
-        hint: null,
         password: null
     },
     process: {
@@ -36,8 +35,7 @@ export default (state = initialState, {
                 files: {
                     ...state.files,
                     fileList: payload.fileList,
-                    mode: payload.mode,
-                    hint: payload.hint
+                    mode: payload.mode
                 },
                 passwordModal: {
                     show: true
@@ -49,7 +47,6 @@ export default (state = initialState, {
                 ...state,
                 files: {
                     ...state.files,
-                    hint: payload.hint,
                     password: payload.password
                 },
                 passwordModal: {

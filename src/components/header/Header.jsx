@@ -9,7 +9,6 @@ const Header = (props) => {
       <div className={headerCSS.logo}>
         <img src={logo} alt="logo" className="logo" />
       </div>
-
       <div className={headerCSS.brand}>
         <h1>ICSI448 - Мэдээллийн аюулгүй байдал</h1>
       </div>

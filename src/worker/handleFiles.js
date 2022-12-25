@@ -40,7 +40,6 @@ export const handleFiles = async (fileList) => {
             numCrypt += 1;
         }
     });
-
     if (numCrypt === 1 && fileList.length === 1) {
         return "decrypt";
     } else {
@@ -74,7 +73,6 @@ export const fileToData = async (file) => {
 export const encrypt = async (data, filename, key, hint) => {
     var eKey = await getKey(key);
     incrementProgress();
-
     var encrypted = await CryptoJS.AES.encrypt(data, eKey).toString();
     incrementProgress();
     var md5 = CryptoJS.MD5(data).toString();
@@ -91,22 +89,16 @@ export const encrypt = async (data, filename, key, hint) => {
         sha256Before: sha256HashUnencrypted,
         sha256After: sha256HashEncrypted
     };
-
     incrementProgress();
-
     var zip = new JSZip();
     zip.file(".meta", JSON.stringify(metadata));
-
     zip.file("file", encrypted, {
         base64: true
     });
-
     var newZip = await zip.generateAsync({
         type: "blob"
     });
-
     incrementProgress();
-
     return {
         file: newZip,
         name: md5 + ".aes"
